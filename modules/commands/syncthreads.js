@@ -6,16 +6,15 @@
 module.exports = {
   config: {
     name: "syncthreads",
-    version: "1.0.0",
-    hasPermission: 2, // Admin only
+    version: "2.2.0",
+    permission: 'ADMIN',
     credit: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
-    description: "Manually sync all threads to database",
+    description: "Manually sync all Facebook threads to database",
+    hasPrefix: true,
     category: "ADMIN",
     usages: "syncthreads",
-    cooldowns: 30,
-    dependencies: {}
+    cooldowns: 30
   },
-
   run: async function ({ api, message, getText }) {
     const { threadID, messageID } = message;
 
